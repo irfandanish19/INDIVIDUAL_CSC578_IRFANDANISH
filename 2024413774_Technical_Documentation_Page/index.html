@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Technical Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>CSS Grid Docs</header>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#Grid_Container">Grid Container</a>
+        <a class="nav-link" href="#Grid_Tracks">Grid Tracks</a>
+        <a class="nav-link" href="#Placing_Items">Placing Items</a>
+        <a class="nav-link" href="#Advanced_Layouts">Advanced Layouts</a>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>CSS Grid Layout is a highly powerful two-dimensional layout system designed specifically for the web. It allows developers to create complex grid structures with rows and columns smoothly without relying heavily on floats or positioning.</p>
+            <p>Unlike Flexbox, which is primarily one-dimensional (dealing with either a single row or column at a time), CSS Grid works effortlessly across both dimensions simultaneously.</p>
+            <p>To initialize a grid, you simply apply the following property to a parent element:</p>
+            <code>display: grid;</code>
+        </section>
+
+        <section class="main-section" id="Grid_Container">
+            <header>Grid Container</header>
+            <p>The element that has <code>display: grid</code> applied to it becomes the direct grid container. All immediate children of this element automatically become grid items.</p>
+            <p>Once you establish a container, you can define its structural columns and rows using explicit sizing parameters. This container manages the foundational structural layout properties for its direct descendants.</p>
+            <p>Here are basic rules for grid containers:</p>
+            <ul>
+                <li>They establish a new grid formatting context.</li>
+                <li>They can utilize alignment properties like <code>justify-items</code>.</li>
+                <li>They pass structural rules down to direct children.</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Grid_Tracks">
+            <header>Grid Tracks</header>
+            <p>Columns and rows are collectively referred to as grid tracks. You define these tracks on your grid container using specific properties that dictate their sizing parameters.</p>
+            <p>For instance, to create three columns of equal width, you can use the <code>grid-template-columns</code> property like this:</p>
+            <code>grid-template-columns: 1fr 1fr 1fr;</code>
+            <p>The <code>1fr</code> unit stands for "fractional unit", which automatically calculates a fraction of the available free space inside the container.</p>
+        </section>
+
+        <section class="main-section" id="Placing_Items">
+            <header>Placing Items</header>
+            <p>By default, grid items position themselves automatically according to source order. However, you can explicitly control where an item starts and ends using line numbers.</p>
+            <p>Grid lines are the numbered lines that divide the columns and rows. You can target specific lines using item properties:</p>
+            <code>grid-column: 1 / 3;</code>
+            <p>This code tells a single item to span from the first vertical grid line up to the third vertical grid line, occupying two columns total.</p>
+            <ul>
+                <li>Line numbers start at 1.</li>
+                <li>Negative numbers like -1 target lines from the end.</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Advanced_Layouts">
+            <header>Advanced Layouts</header>
+            <p>For more intuitive and scalable setups, CSS Grid offers advanced features like grid template areas and auto-fitting techniques.</p>
+            <p>Using the repeat function alongside <code>auto-fit</code> allows you to create beautifully responsive layouts completely without media queries:</p>
+            <code>grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));</code>
+            <p>This single rule establishes as many 200px columns as the viewport can fit, instantly distributing remaining fractional workspace equally across items.</p>
+        </section>
+    </main>
+</body>
+</html>
