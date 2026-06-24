@@ -1,0 +1,40 @@
+#image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centers the block-level image */
+}
+
+/* General Styling (Personal Style) */
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+#main {
+    background-color: white;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 1000px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#img-div {
+    background: #eee;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+#tribute-info {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+li {
+    margin-bottom: 10px;
+}
